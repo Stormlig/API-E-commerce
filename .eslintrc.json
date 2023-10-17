@@ -1,0 +1,29 @@
+{
+  "env": {
+      "browser": true,
+      "commonjs": true,
+      "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "parserOptions": {
+      "ecmaVersion": "latest"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "arrowParens": "always",
+        "semi": true
+      }
+    ],
+    "semi":"error",
+    "eol-last":"error",
+    "no-duplicate-case":"error"
+
+  }
+}
