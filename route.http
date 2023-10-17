@@ -1,0 +1,46 @@
+POST http://localhost:8080/cadastrar
+Content-Type: application/json
+
+{
+   "name": "Nome Fictício",
+   "email": "email@example.com",
+   "password": "senha_secreta",
+   "cep": "12345-678",
+   "uf": "UF",
+   "city": "Cidade Fictícia"
+}
+
+### Login
+
+POST http://localhost:8080/logar
+Content-Type: application/json
+
+{
+   "email": "email3@example.com",
+   "password": "senha_secreta"
+}
+
+###
+
+PUT http://localhost:8080/atualizar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4NWI5ODgxNy04NWI3LTRjYWMtOTRjZC1iYzEyODFiZDJhZTMiLCJpYXQiOjE2OTc1NjE3MDUsImV4cCI6MTY5NzU2NTMwNX0.B49TY715GMnQD0C4fF5ZpO7x0tkUdTw9y8Va7pTrFwY
+Content-Type: application/json
+
+{
+   "email": "email14@example.com",
+   "password": "senha_secreta",
+   "cep": "876-54321",
+   "uf": "FU",
+   "city": "E verdade"
+}
+
+###
+
+DELETE http://localhost:8080/excluir
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMTUxY2Q0Zi03NmMxLTQ2NmMtYTkxZS03N2FmZDY0MGQ2N2UiLCJpYXQiOjE2OTc1Njg4MzEsImV4cCI6MTY5NzU3MjQzMX0.f34tcQvJCHIOnK9KBtRy1DHkYQw-6vzZjlNJKZ9lFXw
+Content-Type: application/json
+
+{
+   "email": "email3@example.com",
+   "password": "senha_secreta"
+}
