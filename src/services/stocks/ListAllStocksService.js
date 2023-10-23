@@ -19,7 +19,7 @@ class ListAllStocksService {
       throw new Error("Usuário não encontrado");
     }
 
-    const stocks = await this.stockRepository.listAll();
+    const stocks = await this.stockRepository.findAll();
 
     return stocks;
   }
