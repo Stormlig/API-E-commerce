@@ -6,7 +6,7 @@ const {
   UserRepository,
 } = require("../../database/Repositories/UserRepository/index");
 
-const { Categories } = require("../../entities/categories/index");
+const { Categories } = require("../../entities/categories/Categories");
 
 class RegisterCategoriesService {
   constructor() {
