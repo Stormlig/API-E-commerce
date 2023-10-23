@@ -1,5 +1,5 @@
 const handleError = require("../../errors/handlerError");
-const { DeleteUserService } = require("../../services/index");
+const { DeleteUserService } = require("../../services/users/index");
 
 class DeleteController {
   constructor() {
