@@ -23,7 +23,7 @@ class RegisterCategoriesService {
     const newCategories = new Categories(null, name, description);
 
     const createdCategory =
-      await this.CategoriesRepository.create(newCategories);
+      await this.CategoriesRepository.register(newCategories);
 
     return createdCategory;
   }

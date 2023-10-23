@@ -14,9 +14,9 @@ class RegisterCategoriesController {
 
     try {
       const result = await this.registerCategoriesService.execute(
+        userId,
         name,
         description,
-        userId,
       );
 
       return response.status(200).json(result);
