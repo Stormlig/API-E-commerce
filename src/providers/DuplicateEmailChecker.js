@@ -4,6 +4,7 @@ class DuplicateEmailChecker {
   constructor() {
     this.userRepository = new UserRepository();
   }
+
   async execute(email) {
     const duplicateEmail = await this.userRepository.findByEmail(email);
 
