@@ -1,4 +1,4 @@
-const { LoginUserService } = require("../../services/index");
+const { LoginUserService } = require("../../services/users/index");
 const { CreateJwtToken } = require("../../security/index");
 const handleError = require("../../errors/handlerError");
 
