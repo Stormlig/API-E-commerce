@@ -1,4 +1,4 @@
-const { UpdateUserService } = require("../../services/index");
+const { UpdateUserService } = require("../../services/users/index");
 const handleError = require("../../errors/handlerError");
 
 class UpdateController {
