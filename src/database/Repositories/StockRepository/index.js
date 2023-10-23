@@ -36,6 +36,12 @@ class StockRepository {
 
     return result;
   }
+
+  async delete(productId) {
+    const result = await db("stocks").where({ product_id: productId }).delete();
+
+    return result;
+  }
 }
 
 module.exports = { StockRepository };
