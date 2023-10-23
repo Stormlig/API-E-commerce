@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
    "name": "Nome Fictício",
-   "email": "email@example.com",
+   "email": "email13340@example.com",
    "password": "senha_secreta",
    "cep": "12345-678",
    "uf": "UF",
@@ -16,14 +16,14 @@ POST http://localhost:8080/logar
 Content-Type: application/json
 
 {
-   "email": "email3@example.com",
+   "email": "email130@example.com",
    "password": "senha_secreta"
 }
 
-###
+### Atualizar um usuario
 
 PUT http://localhost:8080/atualizar
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4NWI5ODgxNy04NWI3LTRjYWMtOTRjZC1iYzEyODFiZDJhZTMiLCJpYXQiOjE2OTc1NjE3MDUsImV4cCI6MTY5NzU2NTMwNX0.B49TY715GMnQD0C4fF5ZpO7x0tkUdTw9y8Va7pTrFwY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc3NDcyMjAsImV4cCI6MTY5Nzc1MDgyMH0.0vsB8AkbiwOGoZgrTAUWqQqWJb-Z6e4kPoe4kct7qnY
 Content-Type: application/json
 
 {
@@ -34,13 +34,173 @@ Content-Type: application/json
    "city": "E verdade"
 }
 
-###
+### Excluir um usuario
 
 DELETE http://localhost:8080/excluir
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMTUxY2Q0Zi03NmMxLTQ2NmMtYTkxZS03N2FmZDY0MGQ2N2UiLCJpYXQiOjE2OTc1Njg4MzEsImV4cCI6MTY5NzU3MjQzMX0.f34tcQvJCHIOnK9KBtRy1DHkYQw-6vzZjlNJKZ9lFXw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3NDNkOGI4Mi00YzUxLTQ2YjAtOWI3Yy03OGIzNjFkMjFjOWUiLCJpYXQiOjE2OTc2NTExMDEsImV4cCI6MTY5NzY1NDcwMX0.Q_NYzOmVXP2cW4JItII4mqBKhN_5Ym1eztGdghAJL58
 Content-Type: application/json
 
 {
-   "email": "email3@example.com",
+   "email": "email14@example.com",
    "password": "senha_secreta"
 }
+
+
+### Lista todos os produtos
+
+GET http://localhost:8080/listar
+Content-Type: application/json
+
+### Registra um produto
+
+POST http://localhost:8080/registrar
+Content-Type: application/json
+
+{
+  "name": "Mizuno Sorayama",
+  "description": "Tênis Mizuno Wave Prophecy Sorayama",
+  "categories_id": 4,
+  "mark": "Mizuno",
+  "price": "300000",
+  "quantity": 50
+}
+
+### Atualiza um produto
+
+PUT http://localhost:8080/atualizarProduto
+Content-Type: application/json
+
+{
+  "id": "d9d0fc9a-d395-444c-8988-2915bd192187",
+  "name": "Pants Jeans",
+  "description": "jeans Griff",
+  "categories_id": 2,
+  "mark": "Gucci",
+  "price": "25900"
+}
+
+### Deleta um produto
+
+DELETE http://localhost:8080/excluirProduto/54a513e8-12d0-4d5d-bd3a-b798da2239d6
+Content-Type: application/json
+
+
+### Registra uma compra.
+
+POST http://localhost:8080/venda
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4ODgxNTcsImV4cCI6MTY5Nzg5MTc1N30.b6ZSxsbkZixG2TkFXMXFAu1FzOyK_CTTztmns4nzg7o
+Content-Type: application/json
+
+{
+  "product_id": "114741a0-83cd-4ec3-9579-ca500012b32a",
+  "quantity": "50",
+  "form_of_payment": "credito",
+  "card": {
+    "number": "4242424242424242",
+    "exp_month": 12,
+    "exp_year": 2029,
+    "cvc": 123
+  }
+}
+
+### Lista todas as vendas
+
+GET http://localhost:8080/vendas
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Content-Type: application/json
+
+
+### Lista venda por  id
+
+GET http://localhost:8080/vendas/114741a0-83cd-4ec3-9579-ca500012b32a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Content-Type: application/json
+
+
+### listar estoque
+
+GET http://localhost:8080/listarEstoque
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Content-Type: application/json
+
+
+### delete  um item do estoque
+
+DELETE http://localhost:8080/deletarEstoque/114741a0-83cd-4ec3-9579-ca500012b32a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Content-Type: application/json
+
+
+### Atualizar estoque
+
+PUT http://localhost:8080/atualizarEstoque/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Content-Type: application/json
+
+{
+  "productId":"114741a0-83cd-4ec3-9579-ca500012b32a",
+  "quantity": "100"
+}
+
+
+### listar categorias
+
+GET http://localhost:8080/listarCategorias
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Content-Type: application/json
+
+
+ ### cadastrar categoria
+
+POST http://localhost:8080/cadastrarCategorias
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Content-Type: application/json
+
+{
+  "nome": "esportivos",
+  "description": "artigos esportivos como: luvas, pé de pato, oculos de natação..."
+}
+
+###
+###
+### Carrinho de compras
+
+POST http://localhost:8080/carrinho/addItem
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwMTIwMjIsImV4cCI6MTY5ODAxNTYyMn0.gYqV8DeFbqyF_dKbRbZBNilzP6H-ioigsv_DnEjMdVA
+Content-Type: application/json
+
+{
+  "product_id": "114741a0-83cd-4ec3-9579-ca500012b32a",
+  "name": "nome do produto",
+  "price": 2000,
+  "quantity": 15
+}
+
+###
+
+GET http://localhost:8080/carrinho/listar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwMTIwMjIsImV4cCI6MTY5ODAxNTYyMn0.gYqV8DeFbqyF_dKbRbZBNilzP6H-ioigsv_DnEjMdVA
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/carrinho/removerItem/114741a0-83cd-4ec3-9579-ca500012b32a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwMTIwMjIsImV4cCI6MTY5ODAxNTYyMn0.gYqV8DeFbqyF_dKbRbZBNilzP6H-ioigsv_DnEjMdVA
+Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/carrinho/atualizarQuantidade
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwMTIwMjIsImV4cCI6MTY5ODAxNTYyMn0.gYqV8DeFbqyF_dKbRbZBNilzP6H-ioigsv_DnEjMdVA
+Content-Type: application/json
+
+{
+  "product_id": "114741a0-83cd-4ec3-9579-ca500012b32a",
+  "quantity": 5
+}
+
+###
+
+GET http://localhost:8080/carrinho/total
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwMTYyMTIsImV4cCI6MTY5ODAxOTgxMn0.-y05AUEO52G2dWC_Ely7UnReM4ZusdjHkONaJSi9opM
+Content-Type: application/json
