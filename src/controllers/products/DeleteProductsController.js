@@ -6,10 +6,16 @@ class DeleteProductsController {
     this.deleteProductsService = new DeleteProductsService();
   }
   async delete(request, response) {
+    const { userId } = response.locals.usuario;
+
     const { id } = request.params;
     //adicionar uma função para validar que todos os campos sejam obrigatório
     try {
-      await this.deleteProductsService.execute(id);
+      if (id === undefined) {
+        throw new Error("Passe um id valido!");
+      }
+
+      await this.deleteProductsService.execute(id, userId);
 
       return response
         .status(200)

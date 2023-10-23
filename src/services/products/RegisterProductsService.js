@@ -10,14 +10,32 @@ const {
   CategoriesRepository,
 } = require("../../database/Repositories/CategoriesRepository/index");
 
+const {
+  UserRepository,
+} = require("../../database/Repositories/UserRepository/index");
+
 class RegisterProductsService {
   constructor() {
     this.productsRepository = new ProductsRepository();
     this.stockRepository = new StockRepository();
     this.categoriesRepository = new CategoriesRepository();
+    this.userRepository = new UserRepository();
   }
 
-  async execute({ name, description, categories_id, mark, price, quantity }) {
+  async execute({
+    userId,
+    name,
+    description,
+    categories_id,
+    mark,
+    price,
+    quantity,
+  }) {
+    const existingUser = await this.userRepository.findById(userId);
+
+    if (!existingUser) {
+      throw new Error("Usuário não encontrado");
+    }
     const existingCategory =
       await this.categoriesRepository.findById(categories_id);
 
