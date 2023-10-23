@@ -4,7 +4,7 @@ const {
 const { User } = require("../../entities/users/Users.js");
 const {
   DuplicateEmailChecker,
-} = require("../../utils/DuplicateEmailChecker.js");
+} = require("../../providers/DuplicateEmailChecker.js");
 const { EncryptionService } = require("../../security/index.js");
 
 class CreateUserService {
