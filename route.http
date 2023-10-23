@@ -23,7 +23,7 @@ Content-Type: application/json
 ### Atualizar um usuario
 
 PUT http://localhost:8080/atualizar
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc3NDcyMjAsImV4cCI6MTY5Nzc1MDgyMH0.0vsB8AkbiwOGoZgrTAUWqQqWJb-Z6e4kPoe4kct7qnY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
 Content-Type: application/json
 
 {
@@ -54,46 +54,50 @@ Content-Type: application/json
 ### Registra um produto
 
 POST http://localhost:8080/registrar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
 Content-Type: application/json
 
 {
-  "name": "Mizuno Sorayama",
-  "description": "Tênis Mizuno Wave Prophecy Sorayama",
+  "name": "Nike",
+  "description": "Tênis ",
   "categories_id": 4,
-  "mark": "Mizuno",
+  "mark": "Nike",
   "price": "300000",
-  "quantity": 50
+  "quantity": 200
 }
 
 ### Atualiza um produto
 
 PUT http://localhost:8080/atualizarProduto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODc3OTQsImV4cCI6MTY5ODA5MTM5NH0.vTPRzivnN4JHxMluHjP7eT2TvO5jNYhfmPeq0-FQnpU
 Content-Type: application/json
 
 {
-  "id": "d9d0fc9a-d395-444c-8988-2915bd192187",
-  "name": "Pants Jeans",
-  "description": "jeans Griff",
+  "id": "2ffd22e3-f52c-40e2-af75-50195ddd5648",
+  "name": "Nike Vomero 17",
+  "description": "Tenis Griff",
   "categories_id": 2,
-  "mark": "Gucci",
-  "price": "25900"
+  "mark": "Nike",
+  "price": "259000"
 }
 
 ### Deleta um produto
 
-DELETE http://localhost:8080/excluirProduto/54a513e8-12d0-4d5d-bd3a-b798da2239d6
+DELETE http://localhost:8080/excluirProduto/a40ccebf-8c1d-4d05-a58d-6b0d62c75de1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODc3OTQsImV4cCI6MTY5ODA5MTM5NH0.vTPRzivnN4JHxMluHjP7eT2TvO5jNYhfmPeq0-FQnpU
 Content-Type: application/json
 
 
 ### Registra uma compra.
 
+
 POST http://localhost:8080/venda
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4ODgxNTcsImV4cCI6MTY5Nzg5MTc1N30.b6ZSxsbkZixG2TkFXMXFAu1FzOyK_CTTztmns4nzg7o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODY4MTYsImV4cCI6MTY5ODA5MDQxNn0.Y8ZFPVdvWO3-Bc0NscybZMGk6BKG6EvkR38sD7lshXQ
 Content-Type: application/json
 
 {
-  "product_id": "114741a0-83cd-4ec3-9579-ca500012b32a",
-  "quantity": "50",
+  "product_id": "2ffd22e3-f52c-40e2-af75-50195ddd5648",
+  "quantity": 50,
   "form_of_payment": "credito",
   "card": {
     "number": "4242424242424242",
@@ -106,35 +110,35 @@ Content-Type: application/json
 ### Lista todas as vendas
 
 GET http://localhost:8080/vendas
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODY4MTYsImV4cCI6MTY5ODA5MDQxNn0.Y8ZFPVdvWO3-Bc0NscybZMGk6BKG6EvkR38sD7lshXQ
 Content-Type: application/json
 
 
 ### Lista venda por  id
 
 GET http://localhost:8080/vendas/114741a0-83cd-4ec3-9579-ca500012b32a
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
 Content-Type: application/json
 
 
 ### listar estoque
 
 GET http://localhost:8080/listarEstoque
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
 Content-Type: application/json
 
 
 ### delete  um item do estoque
 
 DELETE http://localhost:8080/deletarEstoque/114741a0-83cd-4ec3-9579-ca500012b32a
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
 Content-Type: application/json
 
 
 ### Atualizar estoque
 
 PUT http://localhost:8080/atualizarEstoque/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
 Content-Type: application/json
 
 {
@@ -146,18 +150,16 @@ Content-Type: application/json
 ### listar categorias
 
 GET http://localhost:8080/listarCategorias
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
-Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
 
-
- ### cadastrar categoria
+###
 
 POST http://localhost:8080/cadastrarCategorias
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTc4OTQzMTMsImV4cCI6MTY5Nzg5NzkxM30.Z0UJQICa1wDtnpfsNVYWqwJ2xw7ZPtEC0S5VqpgIoPE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
 Content-Type: application/json
 
 {
-  "nome": "esportivos",
+  "name": "esportivos",
   "description": "artigos esportivos como: luvas, pé de pato, oculos de natação..."
 }
 
@@ -204,3 +206,7 @@ Content-Type: application/json
 GET http://localhost:8080/carrinho/total
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwMTYyMTIsImV4cCI6MTY5ODAxOTgxMn0.-y05AUEO52G2dWC_Ely7UnReM4ZusdjHkONaJSi9opM
 Content-Type: application/json
+
+
+###
+
