@@ -21,6 +21,19 @@ A API E-commerce foi desenvolvida utilizando as seguintes tecnologias:
 
 O projeto segue os princípios da arquitetura limpa e leva em consideração os princípios do SOLID. O código foi organizado de acordo com os princípios de modularidade, reutilização e responsabilidade única.
 
+## 🚨 Programação Procedural em Partes Específicas
+Você pode notar que em algumas partes específicas deste projeto, optei por utilizar programação procedural em vez do estilo orientado a objetos que permeia a maior parte do código. Essa escolha foi feita de forma intencional para atender a necessidades particulares e por razões específicas.
+
+## 💳	Função para Obter Token do Cartão
+Uma dessas áreas é a função "obterTokenDoCartao" utilizada para mapear números de cartão de teste para tokens correspondentes. Essa função foi projetada para manter a capacidade de testar o sistema de pagamento com dados realistas. Ela permite que você insira números de cartão específicos e obtenha os tokens associados para simular transações de pagamento. Lembre-se de que, devido a atualizações na Stripe, essa função só funcionará em produção.
+
+### 📎	Interação com o Sistema de Pagamento
+Outro exemplo de programação procedural pode ser visto na interação com o sistema de pagamento, onde as funções "criarToken" e "debitarToken" foram implementadas. Essas funções têm o propósito de criar tokens de pagamento e efetuar cobranças. Elas foram desenvolvidas para se adaptar à API de pagamento utilizada neste projeto e, por essa razão, seguem uma abordagem procedural.
+
+A decisão de incorporar programação procedural em áreas específicas do projeto foi tomada para manter a simplicidade e a eficiência quando necessário, sem comprometer a estrutura geral do código orientado a objetos. Essa abordagem híbrida foi uma escolha consciente para equilibrar os benefícios de ambos os paradigmas de programação.
+
+<hr>
+
 ## 🎯 Endpoints da API
 
 A seguir, detalhamos cada endpoint da API, incluindo exemplos de requisições:
