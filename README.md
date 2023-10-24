@@ -1,10 +1,10 @@
-# API E-commerce
+# ⛰️ API E-commerce
 
 ## Sobre o Projeto
 
 A API E-commerce é uma aplicação RESTful que oferece suporte a operações CRUD simples, gerenciamento de produtos, controle de estoque, registros de vendas e funcionalidade de carrinho de compras. Ela é capaz de monitorar o estoque, efetuando a remoção dos itens vendidos
 
-## Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 A API E-commerce foi desenvolvida utilizando as seguintes tecnologias:
 
@@ -17,20 +17,20 @@ A API E-commerce foi desenvolvida utilizando as seguintes tecnologias:
 - UUID
 - Day.js (para manipulação de datas)
 
-## Estrutura e Arquitetura
+## 📄 Estrutura e Arquitetura
 
 O projeto segue os princípios da arquitetura limpa e leva em consideração os princípios do SOLID. O código foi organizado de acordo com os princípios de modularidade, reutilização e responsabilidade única.
 
-## Endpoints da API
+## 🎯 Endpoints da API
 
 A seguir, detalhamos cada endpoint da API, incluindo exemplos de requisições:
 
-## Autenticação
+## 🔏	Autenticação
 Para usar a API, é necessário autenticar-se. Você deve obter um token JWT válido através do endpoint de login antes de acessar outros recursos. O token JWT deve ser incluído no cabeçalho de autorização de todas as solicitações subsequentes.
 
 <hr>
 
-### Usuários
+###  Usuários
 
 #### Cadastrar Usuário
 
@@ -358,7 +358,7 @@ Para usar a API, é necessário autenticar-se. Você deve obter um token JWT vá
 <br>
 <br>
 
-# Contribuindo para a API E-commerce
+# 🖋️ Contribuindo para a API E-commerce
 
 Agradecemos pelo seu interesse em contribuir para a API E-commerce. Sua ajuda é valiosa para melhorar e expandir nossa aplicação. Abaixo estão as diretrizes e os passos para contribuir com nosso projeto.
 
