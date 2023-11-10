@@ -92,7 +92,7 @@ Content-Type: application/json
 
 
 POST http://localhost:8080/venda
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODY4MTYsImV4cCI6MTY5ODA5MDQxNn0.Y8ZFPVdvWO3-Bc0NscybZMGk6BKG6EvkR38sD7lshXQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgyNjE0MTQsImV4cCI6MTY5ODI2NTAxNH0.x2gxpnmoqcLfz3WcESRUkTi-obqxjEmYRA-PwPlDRrc
 Content-Type: application/json
 
 {
@@ -110,7 +110,7 @@ Content-Type: application/json
 ### Lista todas as vendas
 
 GET http://localhost:8080/vendas
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODY4MTYsImV4cCI6MTY5ODA5MDQxNn0.Y8ZFPVdvWO3-Bc0NscybZMGk6BKG6EvkR38sD7lshXQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwOTI4NTMsImV4cCI6MTY5ODA5NjQ1M30.Oxsm21Ws8bYM9Flfz2z97jhkn3Mf17OxsY-IohDaQc4
 Content-Type: application/json
 
 
@@ -124,7 +124,7 @@ Content-Type: application/json
 ### listar estoque
 
 GET http://localhost:8080/listarEstoque
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwOTI4NTMsImV4cCI6MTY5ODA5NjQ1M30.Oxsm21Ws8bYM9Flfz2z97jhkn3Mf17OxsY-IohDaQc4
 Content-Type: application/json
 
 
@@ -150,7 +150,7 @@ Content-Type: application/json
 ### listar categorias
 
 GET http://localhost:8080/listarCategorias
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwOTI4NTMsImV4cCI6MTY5ODA5NjQ1M30.Oxsm21Ws8bYM9Flfz2z97jhkn3Mf17OxsY-IohDaQc4
 
 ###
 
