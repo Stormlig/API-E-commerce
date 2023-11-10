@@ -5,7 +5,6 @@ class RegisterController {
   async createUser(request, response) {
     try {
       const { name, email, password, cep, uf, city } = request.body;
-      //adicionar uma função para validar que todos os campos sejam obrigatório
 
       const createUser = new CreateUserService();
       await createUser.execute({

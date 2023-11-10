@@ -47,8 +47,11 @@ class RegisterSalesService {
     const amount = Number(quantity) * Number(findProduct.price);
 
     // Verificar a forma de pagamento e obter um token de cartão.
-    const { number: numberCard } = card;
-    const tokenCartao = obterTokenDoCartao(numberCard);
+    // const { number: numberCard } = card;
+    //const tokenCartao = obterTokenDoCartao(numberCard);
+    console.log(card, "cartão");
+    const tokenCartao = criarToken(card);
+    console.log(tokenCartao);
 
     const result = await debitarToken(amount, tokenCartao);
     const { id: transaction_id } = result;
