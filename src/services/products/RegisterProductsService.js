@@ -1,4 +1,4 @@
-const { Products } = require("../../entities/products/products");
+const { Products } = require("../../entities/products/Products");
 const { Stocks } = require("../../entities/stock/Stocks");
 const {
   ProductsRepository,
