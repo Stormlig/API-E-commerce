@@ -7,9 +7,6 @@
   "scripts": {
     "dev": "nodemon ./src/server.js"
   },
-  "engines": {
-    "node": ">=16.0.0"
-  },
   "dependencies": {
     "axios": "^1.5.1",
     "bcrypt": "^5.1.1",
