@@ -1,19 +1,21 @@
 const knex = require("knex");
 require("dotenv").config();
 
+let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
+PGDATABASE = decodeURIComponent(PGDATABASE);
+
 const db = knex({
   client: "pg",
   connection: {
-    host: process.env.HOST_DB,
-    port: process.env.PORT_DB,
-    user: process.env.USER_DB,
-    password: process.env.PASSWORD_DB,
-    database: process.env.NAME_DB,
+    host: PGHOST,
+    database: PGDATABASE,
+    user: PGUSER,
+    password: PGPASSWORD,
+    port: 5432,
+    ssl: { rejectUnauthorized: false },
   },
 });
 
-db.raw("SELECT 1").then(() => {
-  console.log("Conectado com o banco de dados.");
-});
-
 module.exports = db;
+
+
