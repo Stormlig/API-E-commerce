@@ -13,6 +13,8 @@ const {
 const {
   UserRepository,
 } = require("../../database/Repositories/UserRepository/index");
+const { uploadImage } = require("../../utils/Upload");
+const { UUIDGenerator } = require("../../utils/GeneratorUuid");
 
 class RegisterProductsService {
   constructor() {
@@ -30,6 +32,7 @@ class RegisterProductsService {
     mark,
     price,
     quantity,
+    image,
   }) {
     const existingUser = await this.userRepository.findById(userId);
 
@@ -48,13 +51,23 @@ class RegisterProductsService {
       );
     }
 
+    let image_url = null;
+    let product_id = null;
+
+    if (image) {
+      product_id = new UUIDGenerator().generateUUID();
+
+      image_url = await uploadImage(image, product_id);
+    }
+
     const product = new Products(
-      null,
+      null || product_id,
       name,
       description,
       categories_id,
       mark,
       price,
+      null || image_url.url,
     );
 
     const productRegisted = await this.productsRepository.register(product);
