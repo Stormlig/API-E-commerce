@@ -5,8 +5,8 @@ Content-Type: application/json
    "name": "Nome Fictício",
    "email": "email13340@example.com",
    "password": "senha_secreta",
-   "cep": "12345-678",
-   "uf": "UF",
+   "cep": "12345678",
+   "uf": "",
    "city": "Cidade Fictícia"
 }
 
@@ -54,7 +54,7 @@ Content-Type: application/json
 ### Registra um produto
 
 POST http://localhost:8080/registrar
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE2OTgwODI1NDQsImV4cCI6MTY5ODA4NjE0NH0.ig546ueNbndNoCYpzQioZnY4t6KsGKer62KD1nB3C-4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwNTlkMjQ5Mi04YzhlLTQxYzktOGFjZi1lOTU3MjAyMzYxYmUiLCJpYXQiOjE3MDAyNDE3NjgsImV4cCI6MTcwMDI0NTM2OH0.zyc3h2BN1SDSgfP95tddboqFSyjxGBnigqyWxUV1264
 Content-Type: application/json
 
 {
@@ -64,6 +64,7 @@ Content-Type: application/json
   "mark": "Nike",
   "price": "300000",
   "quantity": 200
+  
 }
 
 ### Atualiza um produto
