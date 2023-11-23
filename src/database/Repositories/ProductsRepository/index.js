@@ -10,6 +10,7 @@ class ProductsRepository {
         categories_id: product.categories_id,
         mark: product.mark,
         price: product.price,
+        image: product.image,
       })
       .returning("*");
 
@@ -40,6 +41,7 @@ class ProductsRepository {
         categories_id: product.categories_id,
         mark: product.mark,
         price: product.price,
+        image: product.image,
       })
       .returning("*");
 
