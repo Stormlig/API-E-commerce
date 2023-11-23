@@ -7,7 +7,10 @@ const {
   DeleteProductsController,
 } = require("../../controllers/products/index");
 
-const { AuthJsonWebTokenMiddleware } = require("../../middlewares/index.js");
+const {
+  AuthJsonWebTokenMiddleware,
+  multer,
+} = require("../../middlewares/index.js");
 
 const listAllProductsController = new ListAllProductsController();
 const registerProductsController = new RegisterProductsController();
@@ -24,6 +27,7 @@ routerProducts.get("/listar", (request, response) => {
 
 routerProducts.post(
   "/registrar",
+  multer.single("image"),
   authMiddleware.AuthJsonWebToken,
 
   (request, response) => {
@@ -33,6 +37,7 @@ routerProducts.post(
 
 routerProducts.put(
   "/atualizarProduto",
+  multer.single("image"),
   authMiddleware.AuthJsonWebToken,
   (request, response) => {
     updateProductsController.Update(request, response);
