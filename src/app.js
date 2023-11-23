@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { router } = require("./routes/userRoutes/routes");
 const { FieldsValidator } = require("./middlewares/index");
 const { routerProducts } = require("./routes/productsRoutes/routes");
@@ -8,8 +9,9 @@ const { routeCategories } = require("./routes/categoriesRoutes/routes");
 const { routeCarts } = require("./routes/cartsRoutes/routes");
 
 const app = express();
-const fieldsValidator = new FieldsValidator();
 
+const fieldsValidator = new FieldsValidator();
+app.use(cors());
 app.use(express.json());
 app.use(fieldsValidator.validateFields);
 app.use(router);
