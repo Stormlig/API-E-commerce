@@ -10,8 +10,10 @@ class UpdateProductsController {
   async Update(request, response) {
     const { userId } = response.locals.usuario;
 
+    const image = request.file;
+
     const { id, name, description, categories_id, mark, price } = request.body;
-    // adicionar uma verificação requisição  que valida se  usuario tem permissão para editar os produtos.
+
     try {
       const product = await this.updateProductsService.execute({
         userId,
@@ -21,6 +23,7 @@ class UpdateProductsController {
         categories_id,
         mark,
         price,
+        image,
       });
 
       return response.status(201).json(product);
