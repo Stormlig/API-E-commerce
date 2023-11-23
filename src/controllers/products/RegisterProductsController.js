@@ -10,9 +10,10 @@ class RegisterProductsController {
   async Register(request, response) {
     const { userId } = response.locals.usuario;
 
+    const image = request.file;
+
     const { name, description, categories_id, mark, price, quantity } =
       request.body;
-    //adicionar uma função para validar que todos os campos sejam obrigatório
     try {
       const result = await this.registerProductsService.execute({
         userId,
@@ -22,6 +23,7 @@ class RegisterProductsController {
         mark,
         price,
         quantity,
+        image,
       });
 
       return response.status(201).json(result);
